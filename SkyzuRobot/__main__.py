@@ -81,10 +81,10 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hello {} !*
+*Wah Halo Ka {} !*
 ────────────────────────
-✪ I'm an anime theme bot designed to help manage your telegram group with a lot features.
-✪ Maintained by @skyzu ✨
+✪ Saya adalah bot tema anime yang dirancang untuk membantu mengelola grup telegram Anda dengan banyak fitur.
+✪ Dikelola oleh @WikiTapiOrang ✨
 ────────────────────────
 Hit the /help to see available command.
 """
@@ -112,14 +112,14 @@ buttons = [
 ]
 
 HELP_STRINGS = """
-Click on the button bellow to get description about specifics command."""
+Klik tombol di bawah ini untuk mendapatkan deskripsi tentang perintah spesifik."""
 
-EMI_IMG = "https://telegra.ph/file/56811b69cbcece20bbebf.jpg"
+EMI_IMG = "https://telegra.ph/file/9b9a27cd02e65046d5515.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @skyzu \
- Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+DONATE_STRING = """Heya, senang mendengar Anda ingin menyumbang!
+ Anda dapat mendukung proyek dengan menghubungi @WikiTapiOrang \
+ Mendukung tidak selalu finansial! \
+ Mereka yang tidak dapat memberikan dukungan keuangan dipersilakan untuk membantu kami mengembangkan ."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -240,13 +240,13 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"<b>Hi I'm Skyzu robot!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
+            f"<b>Hai, saya Wiki W!</b>\n<b>Mulai bekerja sejak:</b> <code>{uptime}</code>",
             parse_mode=ParseMode.HTML,
         )
 
 
 def error_handler(update, context):
-    """Log the error and send a telegram message to notify the developer."""
+    """Catat kesalahan dan kirim pesan telegram untuk memberi tahu pengembang."""
     # Log the error before we do anything else, so we can see it even if something breaks.
     LOGGER.error(msg="Exception while handling an update:", exc_info=context.error)
 
@@ -259,7 +259,7 @@ def error_handler(update, context):
 
     # Build the message with some markup and additional information about what happened.
     message = (
-        "An exception was raised while handling an update\n"
+        "Pengecualian muncul saat menangani pembaruan\n"
         "<pre>update = {}</pre>\n\n"
         "<pre>{}</pre>"
     ).format(
@@ -316,7 +316,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "Here is the help for the *{}* module:\n".format(
+                "Berikut adalah bantuan untuk *{}* module:\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -371,15 +371,11 @@ def Skyzu_about_callback(update, context):
     query = update.callback_query
     if query.data == "Skyzu_":
         query.message.edit_text(
-            text="๏ I'm *Skyzu*, a powerful group management bot built to help you manage your group easily."
-            "\n• I can restrict users."
-            "\n• I can greet users with customizable welcome messages and even set a group's rules."
-            "\n• I have an advanced anti-flood system."
-            "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_Skyzu's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for SkyzuRobot.",
+            text="๏ Saya *Wiki W*, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah."
+            "\n• Saya dapat membatasi pengguna."
+            "\n• Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup."
+            "\n• Saya memiliki sistem anti-banjir yang canggih."
+            "\n• Saya dapat memperingatkan pengguna sampai mereka mencapai peringatan maksimal.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -431,14 +427,14 @@ def Skyzu_about_callback(update, context):
 
     elif query.data == "Skyzu_admin":
         query.message.edit_text(
-            text=f"*๏ Let's make your group bit effective now*"
-            f"\nCongragulations, {dispatcher.bot.first_name} now ready to manage your group."
+            text=f"*๏ Ayo buat grup Anda sedikit efektif sekarang*"
+            f"\nSelamat, {dispatcher.bot.first_name} sekarang siap untuk mengelola grup Anda."
             "\n\n*Admin Tools*"
-            "\nBasic Admin tools help you to protect and powerup your group."
-            "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
-            "\n\n*Greetings*"
-            "\nLets set a welcome message to welcome new users coming to your group."
-            "\nsend `/setwelcome [message]` to set a welcome message!",
+            "\nAlat Admin dasar membantu Anda melindungi dan memperkuat grup Anda."
+            "\nAnda dapat mencekal anggota, anggota Kick, Promosikan seseorang sebagai admin melalui perintah bot."
+            "\n\n*Salam pembuka*"
+            "\nMari atur pesan selamat datang untuk menyambut pengguna baru yang datang ke grup Anda."
+            "\nmengirim `/setwelcome [message]` untuk mengatur pesan selamat datang!",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
