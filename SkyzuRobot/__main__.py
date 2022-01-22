@@ -91,21 +91,19 @@ Hit the /help to see available command.
 
 buttons = [
     [
-        InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅ​", callback_data="help_back"),
+        InlineKeyboardButton(text="Orang Stres​", url="https://t.me/WikiTapiOrang"),
     ],
     [
-        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="Skyzu_"),
-        InlineKeyboardButton(text="ᴛʀʏ ɪɴʟɪɴᴇ​", switch_inline_query_current_chat=""),
+        InlineKeyboardButton(text="About", callback_data="Skyzu_"),
+        InlineKeyboardButton(text="Command​", callback_data="help_back"),
+    ],
+    [
+        InlineKeyboardButton(text="Update​", url="https://t.me/WikiTapiChannel"),
+        InlineKeyboardButton(text="Support​", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
         InlineKeyboardButton(
-            text="sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ​", url="https://github.com/Skyzu/SkyzuRobot"
-        ),
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ​", url=f"https://t.me/{SUPPORT_CHAT}"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="➗ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ​ ➗",
+            text="➗ Panggil Saya Ke Group​ ➗",
             url=f"t.me/{dispatcher.bot.username}?startgroup=new",
         ),
     ],
