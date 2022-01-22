@@ -91,15 +91,11 @@ Hit the /help to see available command.
 
 buttons = [
     [
-        InlineKeyboardButton(text="Orang Stres​", url="https://t.me/WikiTapiOrang"),
+        InlineKeyboardButton(text="About Owner​", url="https://t.me/AboutWiki"),
     ],
     [
         InlineKeyboardButton(text="About", callback_data="Skyzu_"),
         InlineKeyboardButton(text="Command​", callback_data="help_back"),
-    ],
-    [
-        InlineKeyboardButton(text="Update​", url="https://t.me/WikiTapiChannel"),
-        InlineKeyboardButton(text="Support​", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
         InlineKeyboardButton(
@@ -473,8 +469,8 @@ def Skyzu_about_callback(update, context):
 
     elif query.data == "Skyzu_credit":
         query.message.edit_text(
-            text=f"<b>๏ Credis for Skyzu</b>\n"
-            f"\nHere Developers Making The SkyzuRobot",
+            text=f"<b>๏ Credis for Wiki W</b>\n"
+            f"\nDi Sini Pengembang Membuat Wiki W",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -500,7 +496,7 @@ def Source_about_callback(update, context):
             "\n • `/resume` - Untuk melanjutkan pemutaran Anda telah menjeda."
             "\n • `/skip` - Untuk melewatkan pemain."
             "\n • `/end` - Untuk mengakhiri pemutaran."
-            "\n • `/musicplayer <on/off>` - Beralih untuk AKTIFKAN atau MATIKAN pemutar musik."
+            "\n • `/musicp <on/off>` - Beralih untuk AKTIFKAN atau MATIKAN pemutar musik."
             "\n\n๏ Command for all members."
             "\n • `/play` <query /reply audio> - Memutar musik melalui YouTube."
             "\n • `/playlist` - Untuk memutar daftar putar grup atau daftar putar pribadi Anda",
