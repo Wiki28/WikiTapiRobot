@@ -8,20 +8,20 @@ from asyncio.exceptions import TimeoutError
 @register(pattern="^/sg ?(.*)")
 async def lastname(steal):
     steal.pattern_match.group(1)
-    puki = await steal.reply("```Retrieving Such User Information..```")
+    puki = await steal.reply("```Kau siapa sih, ane kepo kalau gk terima pc @WikiTapiStres itu owner ane ye😑..```")
     if steal.fwd_from:
         return
     if not steal.reply_to_msg_id:
-        await puki.edit("```Please Reply To User Message.```")
+        await puki.edit("```Mohon Balas Ke Pesan Pengguna.```")
         return
     message = await steal.get_reply_message()
     chat = "@SangMataInfo_bot"
     user_id = message.sender.id
     id = f"/search_id {user_id}"
     if message.sender.bot:
-        await puki.edit("```Reply To Real User's Message.```")
+        await puki.edit("```Balas Pesan Pengguna Asli.```")
         return
-    await puki.edit("```Please wait...```")
+    await puki.edit("```Tunggu sebentar...```")
     try:
         async with ubot.conversation(chat) as conv:
             try:
@@ -29,7 +29,7 @@ async def lastname(steal):
                 r = await conv.get_response()
                 response = await conv.get_response()
             except YouBlockedUserError:
-                await steal.reply("```Error, report to @skyzusupport```")
+                await steal.reply("```Kesalahan, laporkan ke @WikiTapiGroup```")
                 return
             if r.text.startswith("Name"):
                 respond = await conv.get_response()
@@ -42,7 +42,7 @@ async def lastname(steal):
                 "No records"
             ):
                 await puki.edit(
-                    "```I Can't Find This User's Information, This User Has Never Changed His Name Before.```"
+                    "```Saya Tidak Dapat Menemukan Informasi Pengguna Ini, Pengguna Ini Belum Pernah Mengubah Namanya Sebelumnya.```"
                 )
                 await ubot.delete_messages(conv.chat_id, [msg.id, r.id, response.id])
                 return
@@ -53,4 +53,4 @@ async def lastname(steal):
                 conv.chat_id, [msg.id, r.id, response.id, respond.id]
             )
     except TimeoutError:
-        return await puki.edit("`I'm Sick Sorry...`")
+        return await puki.edit("`Aku Sakit Maaf...`")
