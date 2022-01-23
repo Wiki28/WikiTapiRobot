@@ -4,7 +4,7 @@ from telegram.ext.filters import Filters
 from telegram import Update, message, ParseMode
 from telegram.ext import CallbackContext
 
-from SkyzuRobot.modules.helper_funcs.decorators import Primecmd, Primemsg
+from SkyzuRobot.modules.helper_funcs.decorators import Skyzucmd, Skyzumsg
 from SkyzuRobot.modules.helper_funcs.channel_mode import user_admin, AdminPerms
 from SkyzuRobot.modules.sql.antichannel_sql import antichannel_status, disable_antichannel, enable_antichannel
 
