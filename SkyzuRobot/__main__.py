@@ -471,12 +471,16 @@ def Skyzu_about_callback(update, context):
     elif query.data == "Skyzu_credit":
         query.message.edit_text(
             text=f"<b>๏ Credis for Wiki W</b>\n"
-            f"\nDi Sini Pengembang Membuat Wiki W",
+            f"\nDi Sini Para Suhu Dan Saya Ikut²na😑",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(text="Wiki W", url="t.me/WikiTapiOrang"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="Skyzu", url="t.me/skyzu"),
+                        InlineKeyboardButton(text="Skyzo", url="t.me/xflskyzo"),
                     ],
                     [
                         InlineKeyboardButton(text="ɢᴏ ʙᴀᴄᴋ​", callback_data="Skyzu_"),
@@ -490,7 +494,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text="๏›› Perintah lanjutan ini untuk Pemutar Musik."
+            text="๏›› Perintah lanjutan ini untuk Pemutar Musik.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
