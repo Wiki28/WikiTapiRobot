@@ -503,7 +503,16 @@ def Source_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="ɢᴏ ʙᴀᴄᴋ​", callback_data="Skyzu_")]]
+                [
+                    [
+                        InlineKeyboardButton(text="CD Music", url="https://telegra.ph/Skyzo-11-10"),
+                        InlineKeyboardButton(text="CD Dev", url="https://telegra.ph/壊Skyzo-01-21"),
+                        InlineKeyboardButton(text="CD Stream", url="https://telegra.ph/sᴋʏᴢᴏ-ᴇx-12-21"),
+                    ],
+                    [
+                        InlineKeyboardButton(text="ɢᴏ ʙᴀᴄᴋ​", callback_data="Skyzu_"),
+                    ],
+                ]
             ),
         )
     elif query.data == "source_back":
