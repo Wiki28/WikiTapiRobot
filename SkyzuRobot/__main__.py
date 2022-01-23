@@ -83,10 +83,11 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 *Wah Halo Ka {} !*
 ────────────────────────
-✪ Saya adalah bot tema anime yang dirancang untuk membantu mengelola grup telegram Anda dengan banyak fitur.
+✪ Saya adalah bot Manager + Music + Streaming Di rancang untuk Memutar Music + Streaming dan Manager Untuk Group Anda.
+✪ Untuk perintah bot music nya lebih detail tekan ABOUT terus  MUSICPLAYER,
 ✪ Dikelola oleh @WikiTapiOrang ✨
 ────────────────────────
-Hit the /help to see available command.
+Tekan /help untuk melihat perintah yang tersedia.
 """
 
 buttons = [
@@ -490,16 +491,6 @@ def Source_about_callback(update, context):
     if query.data == "source_":
         query.message.edit_text(
             text="๏›› Perintah lanjutan ini untuk Pemutar Musik."
-            "\n\n๏ Perintah hanya untuk admin."
-            "\n • `/reload` - Untuk menyegarkan daftar admin."
-            "\n • `/pause` - Untuk menjeda pemutaran."
-            "\n • `/resume` - Untuk melanjutkan pemutaran Anda telah menjeda."
-            "\n • `/skip` - Untuk melewatkan pemain."
-            "\n • `/end` - Untuk mengakhiri pemutaran."
-            "\n • `/musicp <on/off>` - Beralih untuk AKTIFKAN atau MATIKAN pemutar musik."
-            "\n\n๏ Command for all members."
-            "\n • `/play` <query /reply audio> - Memutar musik melalui YouTube."
-            "\n • `/playlist` - Untuk memutar daftar putar grup atau daftar putar pribadi Anda",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
