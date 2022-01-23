@@ -7,10 +7,10 @@ from telegram.inline.inlinekeyboardbutton import InlineKeyboardButton
 from telegram.inline.inlinekeyboardmarkup import InlineKeyboardMarkup
 
 from SkyzuRobot import DRAGONS, DEV_USERS, dispatcher
-from SkyzuRobot.modules.helper_funcs.decorators import Primecallback
+from SkyzuRobot.modules.helper_funcs.decorators import Skyzucallback
 
 
-class AdminPerms(Enum):
+class AdminSkyzu(Enum):
     CAN_RESTRICT_MEMBERS = 'can_restrict_members'
     CAN_PROMOTE_MEMBERS = 'can_promote_members'
     CAN_INVITE_USERS = 'can_invite_users'
@@ -28,7 +28,7 @@ anon_callbacks = {}
 anon_callback_messages = {}
 
 
-def user_admin(permission: AdminPerms):
+def user_admin(permission: AdminSkyzu):
     def wrapper(func):
         @functools.wraps(func)
         def awrapper(update: Update, context: CallbackContext, *args, **kwargs):
@@ -61,7 +61,7 @@ def user_admin(permission: AdminPerms):
     return wrapper
 
 
-@Primecallback(pattern="anoncb")
+@Skyzucallback(pattern="anoncb")
 def anon_callback_handler1(upd: Update, _: CallbackContext):
     callback = upd.callback_query
     perm = callback.data.split('/')[3]
