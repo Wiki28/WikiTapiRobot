@@ -500,9 +500,9 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="CD Music", url="https://telegra.ph/Skyzo-11-10"),
-                        InlineKeyboardButton(text="CD Dev", url="https://telegra.ph/壊Skyzo-01-21"),
-                        InlineKeyboardButton(text="CD Stream", url="https://telegra.ph/sᴋʏᴢᴏ-ᴇx-12-21"),
+                        InlineKeyboardButton(text="CD Music", url="https://t.me/WikiTapiChannel/138"),
+                        InlineKeyboardButton(text="CD Dev", url="https://t.me/WikiTapiChannel/139"),
+                        InlineKeyboardButton(text="CD Stream", url="https://t.me/WikiTapiChannel/140"),
                     ],
                     [
                         InlineKeyboardButton(text="ɢᴏ ʙᴀᴄᴋ​", callback_data="Skyzu_"),
