@@ -5,7 +5,7 @@ from telegram import Update, message, ParseMode
 from telegram.ext import CallbackContext
 
 from SkyzuRobot.modules.helper_funcs.decorators import Skyzucmd, Skyzumsg
-from SkyzuRobot.modules.helper_funcs.channel_mode import user_admin, AdminPerms
+from SkyzuRobot.modules.helper_funcs.channel_mode import user_admin, AdminSkyzu
 from SkyzuRobot.modules.sql.antichannel_sql import antichannel_status, disable_antichannel, enable_antichannel
 
 @Skyzucmd(command="antich", group=100)
