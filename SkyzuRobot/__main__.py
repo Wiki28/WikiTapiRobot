@@ -794,10 +794,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}",
-                f"""**Wiki W Dimulai!**
-
-**Python:** `{memek()}`
-**Telegram Library:** `v{peler}`""",
+                f"""**Wiki W Dimulai!**""",
                 parse_mode=ParseMode.MARKDOWN,
             )
         except Unauthorized:
