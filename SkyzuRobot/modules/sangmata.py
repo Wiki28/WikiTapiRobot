@@ -8,7 +8,9 @@ from asyncio.exceptions import TimeoutError
 @register(pattern="^/sg ?(.*)")
 async def lastname(steal):
     steal.pattern_match.group(1)
-    puki = await steal.reply("```Kau siapa sih, ane kepo kalau gk terima pc @WikiTapiStres itu owner ane ye😑..```")
+    puki = await steal.reply(
+        "```Kau siapa sih, ane kepo kalau gk terima pc @WikiTapiStres itu owner ane ye😑..```"
+    )
     if steal.fwd_from:
         return
     if not steal.reply_to_msg_id:
