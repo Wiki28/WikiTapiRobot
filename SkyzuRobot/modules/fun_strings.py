@@ -60,14 +60,14 @@ SLAP_SAITAMA_TEMPLATES = (
     "Jika kau menamparku sekali lagi, Wiki W akan membunuhmu.",
     "Anak Kampang.",
     [
-        "Saya membungkam Anda Sebentar.", #normal reply
-        "Berhenti menamparku, kau tahu siapa pemilikku 😅", #reply to admin
-        "tmute" #command
+        "Saya membungkam Anda Sebentar.",  # normal reply
+        "Berhenti menamparku, kau tahu siapa pemilikku 😅",  # reply to admin
+        "tmute",  # command
     ],
 )
 
 SLAP_TEMPLATES = (
-     "{user2} Di Tembak Mati Oleh Si {user1}.",
+    "{user2} Di Tembak Mati Oleh Si {user1}.",
     "{user2} Membungkukkan Kepalanya Kepada Si {user1}.",
     "{user2} Mencium Bibir {user1} Karena Gak Bisa Tahan Nafsu.",
     "{user2} Menjilat Biji Si {user1}.",
@@ -90,7 +90,7 @@ SLAP_TEMPLATES = (
     "{user2} Menusbol {user1} Dengan Kecepatan Yang Mengagumkan.",
     "{user1} {hits} {user2} Dengan Batu!.",
     "{user1} {hits} {user2} Dengan Sodokan!.",
-    "{user1} {hits} {user2} Dengan Bola!.",    
+    "{user1} {hits} {user2} Dengan Bola!.",
     "{user1} {hits} {user2} Dengan Tangan Kosong!.",
     "{user1} Dan {user2} Suka Mencabuli Loli!.",
     "{user1} Di Entot Oleh {user2}.",

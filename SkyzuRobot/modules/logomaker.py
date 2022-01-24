@@ -209,6 +209,7 @@ async def logo_(event):
         if not font_.startswith("./SkyzuRobot/resources/fonts"):
             os.remove(font_)
 
+
 @register(pattern="^/clogo ?(.*)")
 async def logo_(event):
     xx = await event.reply("`Preparing your logo...`")
